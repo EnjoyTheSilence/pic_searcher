@@ -8,7 +8,7 @@ state = {term:''};
   //to be run when app renders
 onFormSubmit = (event) => {
   event.preventDefault();
-  console.log(this.state.term)
+  this.props.onSubmit(this.state.term);
 }
 //arrow function automatically binds this to instance of search bar
   //can also use this.onFormSubmit = this.onFormSubmit.bind(this) in constructor
